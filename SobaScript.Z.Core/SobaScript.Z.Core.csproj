@@ -41,11 +41,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="License.txt">
+    <None Include="..\License.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <None Include="Readme.md">
+    <None Include="..\Readme.md">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
@@ -54,9 +54,6 @@
   <ItemGroup>
     <ProjectReference Include="..\SobaScript.Mapper\SobaScript.Mapper.csproj" />
     <ProjectReference Include="..\SobaScript\SobaScript.csproj" />
-    <ProjectReference Include="..\E-MSBuild\E-MSBuild.csproj" />
-    <ProjectReference Include="..\LSender\LSender.csproj" />
-    <ProjectReference Include="..\Varhead\Varhead.csproj" />
   </ItemGroup>
 
 </Project>

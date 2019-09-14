@@ -15,7 +15,6 @@
   <ItemGroup>
     <ProjectReference Include="..\SobaScript.Z.Core\SobaScript.Z.Core.csproj" />
     <ProjectReference Include="..\SobaScript\SobaScript.csproj" />
-    <ProjectReference Include="..\Varhead\Varhead.csproj" />
   </ItemGroup>
 
 </Project>
