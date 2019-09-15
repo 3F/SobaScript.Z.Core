@@ -1,0 +1,6 @@
+[submodule "SobaScript"]
+	path = SobaScript
+	url = https://github.com/3F/SobaScript.git
+[submodule "SobaScript.Mapper"]
+	path = SobaScript.Mapper
+	url = https://github.com/3F/SobaScript.Mapper.git

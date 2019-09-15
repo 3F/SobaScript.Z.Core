@@ -29,6 +29,24 @@ namespace SobaScript.Z.CoreTest.Stubs
             return soba;
         }
 
+        public static ISobaScript MakeNewCoreOnly()
+            => RegisterCore(new Soba());
+
+        public static ISobaScript MakeNewCoreOnly(IUVars uvars)
+            => RegisterCore(new Soba(uvars));
+
+        private static ISobaScript RegisterCore(ISobaScript soba)
+        {
+            soba.Register(new TryComponent(soba));
+            soba.Register(new CommentComponent());
+            soba.Register(new BoxComponent(soba));
+            soba.Register(new ConditionComponent(soba));
+            soba.Register(new UserVariableComponent(soba));
+            soba.Register(new EvMSBuildComponent(soba));
+
+            return soba;
+        }
+
         private static ISobaScript MakeSoba(IUVars uvars = null)
             => uvars == null ? new Soba() : new Soba(uvars);
     }

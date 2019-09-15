@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SobaScript.Z.Core\SobaScript.Z.Core.csproj" />
-    <ProjectReference Include="..\SobaScript\SobaScript.csproj" />
   </ItemGroup>
 
 </Project>
