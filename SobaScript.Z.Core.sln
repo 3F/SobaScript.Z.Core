@@ -36,14 +36,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SobaScript.Mapper", "SobaSc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SobaScript.MapperTest", "SobaScript.Mapper\SobaScript.MapperTest\SobaScript.MapperTest.csproj", "{A5B92B3B-B72D-426C-8C3D-9A41DF986357}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{43E42F75-1B79-4E9D-9735-68B01B7241CE}"
-	ProjectSection(SolutionItems) = preProject
-		SobaScript.Mapper\License.txt = SobaScript.Mapper\License.txt
-		SobaScript.Mapper\Readme.md = SobaScript.Mapper\Readme.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SobaScript", "SobaScript", "{A96CE2AF-F773-4C0A-8680-4D0ED79F53A1}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SobaScript", "SobaScript.Mapper\SobaScript\SobaScript\SobaScript.csproj", "{5C96DF4F-267A-46DD-BA95-9F487E8DC1FE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SobaScriptTest", "SobaScript.Mapper\SobaScript\SobaScriptTest\SobaScriptTest.csproj", "{E03F8EC5-20CA-4D54-8CEA-291AFEF6B460}"
@@ -62,6 +54,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Varhead", "SobaScript.Mapper\SobaScript\E-MSBuild\Varhead\Varhead\Varhead.csproj", "{D2185E13-8D1F-4C9E-B655-FE735F0542ED}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LSender", "SobaScript.Mapper\SobaScript\E-MSBuild\Varhead\LSender\LSender\LSender.csproj", "{F76493C4-06AC-4B7F-A9B7-743D10336A7B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{A43CAA25-ED05-48C0-BFC7-E067496B2DF4}"
+	ProjectSection(SolutionItems) = preProject
+		tools\gnt.bat = tools\gnt.bat
+		tools\hMSBuild.bat = tools\hMSBuild.bat
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -345,8 +343,6 @@ Global
 		{09974DE1-98BF-4D9B-81EF-8F41E86861B8} = {915DDBA0-6AE8-4D14-B9E2-A415CDD7DC0F}
 		{069A8DEC-D613-4051-BDD4-DD3F9A2C2397} = {88368C47-6D83-42C2-BF3E-79583EACF29C}
 		{A5B92B3B-B72D-426C-8C3D-9A41DF986357} = {88368C47-6D83-42C2-BF3E-79583EACF29C}
-		{43E42F75-1B79-4E9D-9735-68B01B7241CE} = {88368C47-6D83-42C2-BF3E-79583EACF29C}
-		{A96CE2AF-F773-4C0A-8680-4D0ED79F53A1} = {88368C47-6D83-42C2-BF3E-79583EACF29C}
 		{5C96DF4F-267A-46DD-BA95-9F487E8DC1FE} = {88368C47-6D83-42C2-BF3E-79583EACF29C}
 		{E03F8EC5-20CA-4D54-8CEA-291AFEF6B460} = {88368C47-6D83-42C2-BF3E-79583EACF29C}
 		{54A3EE80-7894-433B-80BA-E29B0331B5B3} = {88368C47-6D83-42C2-BF3E-79583EACF29C}

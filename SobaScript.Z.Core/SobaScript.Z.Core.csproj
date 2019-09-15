@@ -1,7 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>0.0.1.0</Version>
+    <Version>1.14.0</Version>
+    <BuildInfoVSSBE></BuildInfoVSSBE>
     <!-- <AssemblyVersion>0.0.1.0</AssemblyVersion> -->
     <!-- <FileVersion>0.0.1.0</FileVersion> -->
   </PropertyGroup>
@@ -16,7 +17,110 @@
     <Title>Core components for SobaScript</Title>
     <Description>Core components for SobaScript -- Extensible Modular Scripting Programming Language
     
+    https://github.com/3F/SobaScript
+
+Provides at least the following:
+
+* ConditionComponent
+
+Supports composite conditions with limited short-circuit evaluation (separately for all brackets)
+
+Additional Operators:
+
+```
+ ===, !==, ~=, ==, !=, &gt;=, &lt;=, !, &gt;, &lt;, ^=, =^
+```
+
+```
+#[( #[var count] &gt; 10 || (@(isAllow) &amp;&amp; !false) ) {
+    ...
+}
+else{
+    ...
+}]
+```
+
+* EvMSBuildComponent
+
+Through [E-MSBuild](https://github.com/3F/E-MSBuild)
+
+```
+#[@(...)]
+```
+
+* UserVariableComponent
+
+Through [Varhead](https://github.com/3F/Varhead).
+
+```
+#[var name = mixed value]
+#[var name]
+```
+
+```
+#[var branchSha1 = #[IO sout("git", "rev-parse --short HEAD")]]
+```
+
+* TryComponent
+
+Protects from errors in try{...} block and handles it in catch{...}
+
+```
+#[try
+{ 
+    ...
+}
+catch(err, msg)
+{
+    @(err) - Type of Exception
+    @(msg) - Error Message
+    ...
+}]
+```
+
+* CommentComponent
+
+```
+#["
+    Example
+          " Description 1 "
+          " Description 2 "
+"]
+```
+
+* BoxComponent
+
+Container of data for operations such for templating, repeating, etc.
+
+```
+#[Box iterate(i = 0; @(i) &lt; 10; i += 1): 
+    ...
+    #[Box operators.sleep(250)]
+]
+```
+
+```
+#[try {
+
+    #[Box data.pack("header", false): 
+    
+        #[@(data = "Hello @(user) !")]
+        #[File appendLine("@(fname)"): ------ #[@(data)] ------ ]
+    ]
+
+}catch{ }]
+```
+
+
     https://github.com/3F/SobaScript.Z.Core
+
+    =======================================
+    gnt /p:ngpackages="SobaScript.Z.Core/$(Version)"
+    ================== https://github.com/3F/GetNuTool
+
+    Build info:
+
+    $(BuildInfoVSSBE)
     </Description>
     <PackageOwners>reg</PackageOwners>
     <PackageProjectUrl>https://github.com/3F/SobaScript.Z.Core</PackageProjectUrl>
@@ -48,6 +152,27 @@
     <None Include="..\Readme.md">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
+    </None>
+    <None Include="..\changelog.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\.version">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\tools\hMSBuild.bat">
+      <Visible>false</Visible>
+      <Pack>True</Pack>
+      <PackagePath>tools\</PackagePath>
+    </None>
+    <None Include="..\tools\gnt.bat">
+      <Visible>false</Visible>
+      <Pack>True</Pack>
+      <PackagePath>tools\</PackagePath>
     </None>
   </ItemGroup>
 
