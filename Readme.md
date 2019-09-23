@@ -12,7 +12,7 @@ https://github.com/3F/SobaScript
 [![NuGet package](https://img.shields.io/nuget/v/SobaScript.Z.Core.svg)](https://www.nuget.org/packages/SobaScript.Z.Core/)
 [![Tests](https://img.shields.io/appveyor/tests/3Fs/sobascript-z-core/master.svg)](https://ci.appveyor.com/project/3Fs/sobascript-z-core/build/tests)
 
-[![Build history](https://buildstats.info/appveyor/chart/3Fs/SobaScript.Z.Core?buildCount=20&showStats=true)](https://ci.appveyor.com/project/3Fs/SobaScript.Z.Core/history)
+[![Build history](https://buildstats.info/appveyor/chart/3Fs/sobascript-z-core?buildCount=20&showStats=true)](https://ci.appveyor.com/project/3Fs/sobascript-z-core/history)
 
 ## License
 
