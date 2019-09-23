@@ -269,7 +269,7 @@ namespace SobaScript.Z.CoreTest
             soba.Register(new UserVariableComponent(soba));
 
             var target = new ConditionComponent(soba) {
-                PostProcessingMSBuild = true
+                PostProcessing = true
             };
 
             Assert.Equal("yes", target.Eval("[(  $(test) == \"data(str)\" ){yes}else{no}]"));

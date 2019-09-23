@@ -205,7 +205,7 @@ namespace net.r_eg.SobaScript.Z.Core
         protected virtual void Evaluate(string name, string project = null)
         {
             uvars.Evaluate(name, project, soba, true);
-            if(PostProcessingMSBuild) {
+            if(PostProcessing) {
                 uvars.Evaluate(name, project, emsbuild, false);
             }
         }
